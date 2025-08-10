@@ -33,13 +33,15 @@ pinMode( lir,INPUT);
 //pinMode(llir,INPUT);
 Serial.begin(9600);
 }
-// LOW=BLACK 
-//HIGH=WHITE
 void loop() {
   // put your main code here, to run repeatedly:
-
+ 
+//the conditions 
+//high=white
+//low =black
 if(digitalRead(lir)==HIGH && digitalRead(cir)==LOW && digitalRead(rir)==HIGH){
 moveforward();
+ //serial communication to show if my conditions are right
 Serial.println("forward");
 }
 else if (digitalRead(lir)==LOW && digitalRead(cir)==LOW && digitalRead(rir)==HIGH){
